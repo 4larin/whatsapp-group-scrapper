@@ -6,19 +6,20 @@ import time
 import re
 import csv
 
+webdriver_path = 'C:/Users/User 007/Selenium/Drivers/chrome/chromedriver.exe'
+
 
 def sleep(seconds):
     time.sleep(seconds)
 
 
-driver = webdriver.Chrome(executable_path="C:/Users/User 007/Selenium/Drivers/chrome/chromedriver.exe")
+driver = webdriver.Chrome(executable_path=webdriver_path)
 driver.set_window_position(0, 0)
 driver.set_window_size(500, 760)
 driver.get("https://web.whatsapp.com")
 driver.implicitly_wait(5)
 
-#   INPUT DETAILS
-path_to_image_disabler = "C:/Users/User 007/Selenium/"
+#   Exports
 group_numbers = []
 group_contacts = []
 
